@@ -34,7 +34,7 @@ public class TelaValores extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblDiv = new javax.swing.JLabel();
-        lblRes = new javax.swing.JLabel();
+        lblResult = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,7 +42,7 @@ public class TelaValores extends javax.swing.JFrame {
 
         jLabel2.setText("Denominador");
 
-        btnDiv.setText("Dividir");
+        btnDiv.setText("Calcular");
         btnDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDivActionPerformed(evt);
@@ -51,11 +51,11 @@ public class TelaValores extends javax.swing.JFrame {
 
         jLabel3.setText("Divisão");
 
-        jLabel4.setText("Resto");
+        jLabel4.setText("Raiz");
 
         lblDiv.setText("0");
 
-        lblRes.setText("0");
+        lblResult.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,7 +82,7 @@ public class TelaValores extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel4)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblRes))
+                                    .addComponent(lblResult))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addGap(18, 18, 18)
@@ -109,7 +109,7 @@ public class TelaValores extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(lblRes))
+                    .addComponent(lblResult))
                 .addContainerGap(107, Short.MAX_VALUE))
         );
 
@@ -121,9 +121,9 @@ public class TelaValores extends javax.swing.JFrame {
         int numerador = Integer.parseInt(txtNum.getText());
         int denominador = Integer.parseInt(txtDen.getText());
         float dividido = numerador / denominador;
-        float resto = numerador % denominador;
+        float resto = (float) Math.sqrt(numerador);
         lblDiv.setText(Float.toString(dividido));
-        lblRes.setText(Float.toString(resto));
+        lblResult.setText(Float.toString(resto));
     }//GEN-LAST:event_btnDivActionPerformed
 
     /**
@@ -168,7 +168,7 @@ public class TelaValores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblDiv;
-    private javax.swing.JLabel lblRes;
+    private javax.swing.JLabel lblResult;
     private javax.swing.JTextField txtDen;
     private javax.swing.JTextField txtNum;
     // End of variables declaration//GEN-END:variables
