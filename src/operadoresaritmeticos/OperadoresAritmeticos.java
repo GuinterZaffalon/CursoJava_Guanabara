@@ -13,8 +13,15 @@ public class OperadoresAritmeticos {
         int valor = 5 + numero--;
         System.out.println(valor); */
         
-        int x = 4;
+       /* int x = 4;
         x += 2; //x = x+2
-        System.out.println(x);
+        System.out.println(x); */
+       
+      /*float v = 8.3f;
+       int ar = (int) Math.floor(v);
+       System.out.println(ar); */
+      
+      double ale = Math.random();
+      System.out.println(ale);
     }
 }
