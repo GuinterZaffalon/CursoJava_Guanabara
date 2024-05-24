@@ -107,7 +107,7 @@ public class VerificadorIdade extends javax.swing.JFrame {
         int idadeUsuario = Integer.parseInt(txtAno.getText());
         int calculoIdade = ano - idadeUsuario;
         lblIdade.setText(Integer.toString(calculoIdade));
-        String message = (calculoIdade>=18)?"Maior de Idade":"Menor de idade";
+        int message = ((calculoIdade>=16 && <=18) || (>=70))?"Voto Opcional":"Voto Obrigatorio";
         lblSituacao.setText(message);
         
         
