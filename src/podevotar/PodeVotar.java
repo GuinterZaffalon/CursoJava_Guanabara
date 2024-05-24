@@ -16,7 +16,7 @@ public class PodeVotar {
         if (calculoIdade < 16) {
             System.out.println("Não pode votar!");
         } else if ((calculoIdade >= 16 && calculoIdade < 18) || (calculoIdade > 70)){
-            
+            System.out.println("Voto opcional!");
         } else {
             System.out.println("Voto obrigatório!");
         }
